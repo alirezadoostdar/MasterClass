@@ -12,4 +12,13 @@
         path.Destination = "Tehran";
         return path;
     }
+
+	public static Path AhvazToTehran()
+	{
+		var path = new Path();
+		path.Code = 6121;
+		path.Source = "Ahvaz";
+		path.Destination = "Tehran";
+		return path;
+	}
 }

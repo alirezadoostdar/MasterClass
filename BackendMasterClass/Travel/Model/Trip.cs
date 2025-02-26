@@ -3,12 +3,13 @@ using System.Runtime.CompilerServices;
 
 public class Trip
 {
-    public Trip(Bus bus, Path path, double basePrice, DateTime tripDate)
+    public Trip(string tripNo, Bus bus, Path path, double basePrice, DateTime tripDate)
     {
         TripPath = path;
         Bus = bus;
         date = tripDate;
         BasePrice = basePrice;
+        TripNo = tripNo;
     }
     public string TripNo { get; private set; }
     public Bus Bus { get; private set; }
@@ -20,16 +21,26 @@ public class Trip
     public double Price
     {
         get { return BasePrice * (1 + Bus.Rate); }
-
     }
     public double CancellationFee => Price * Bus.ReturnRate; 
-    public double ReturnPrice => Price * (1 - Bus.ReturnRate); 
+    public double ReturnPrice => Price * (1 - Bus.ReturnRate);
+    public bool IsAvailable => date > DateTime.Now;
 
+    public void sell()
+    {
+        SoldSeat++;
+    }
+    public void Return()
+    {
+        SoldSeat--;
+    }
     public override string ToString()
 	{
-        return $"Trip No.:{TripNo} From: {TripPath.Source} To: {TripPath.Destination} Date: {date.ToShamsi()} " +
-       $"Time: {date.ToString("HH:mm")} Price: {Price} Remain Seat: {RemainSeat}" +
-       $" Notice, the cancellation fee is {CancellationFee}";
+        return $"Trip No.:{TripNo} From: {TripPath.Source} To: {TripPath.Destination}\n" +
+            $" Date: {date.ToShamsi()} Time: {date.ToString("HH:mm")} \n" +
+       $"Price: {Price} Remain Seat: {RemainSeat} \n" +
+       $" Notice: the cancellation fee is {CancellationFee}\n" +
+       $"----------------------------------------------------------------------------------";
 	}
 
 }
