@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library", "Library\Library.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Travel", "Travel\Travel.csproj", "{63F40702-12DC-4610-8591-5992D4E68572}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileProvider", "FileProvider\FileProvider.csproj", "{916C22D4-1936-4FF7-A2F8-2D25B0DEFF96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileProvider", "FileProvider\FileProvider.csproj", "{916C22D4-1936-4FF7-A2F8-2D25B0DEFF96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terminal.WPF", "Terminal.WPF\Terminal.WPF.csproj", "{6EA10185-A682-4FAE-8617-2EDFFA0F602F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{916C22D4-1936-4FF7-A2F8-2D25B0DEFF96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{916C22D4-1936-4FF7-A2F8-2D25B0DEFF96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{916C22D4-1936-4FF7-A2F8-2D25B0DEFF96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EA10185-A682-4FAE-8617-2EDFFA0F602F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EA10185-A682-4FAE-8617-2EDFFA0F602F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EA10185-A682-4FAE-8617-2EDFFA0F602F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EA10185-A682-4FAE-8617-2EDFFA0F602F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

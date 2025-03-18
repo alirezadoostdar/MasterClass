@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\terminal.webp" />
+    <None Remove="Resources\terminal2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\terminal.webp" />
+    <Resource Include="Resources\terminal2.png" />
+  </ItemGroup>
+
+</Project>

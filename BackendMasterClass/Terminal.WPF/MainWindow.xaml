@@ -1,0 +1,50 @@
+﻿<Window x:Class="Terminal.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Terminal.WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" BorderBrush="Black" BorderThickness="2" Background="White" Margin="2,2,2,2">
+            <StackPanel>
+                <Button Name="HomeBtn" Height="auto" Width="auto" Margin="20" Background="#3E454C" Foreground="White"
+                        FontSize="32" Click="HomeBtn_Click">Home</Button>
+                <Button Name="TripBtn" Height="auto" Width="auto" Margin="20" Background="#3E454C" Foreground="White"
+                        FontSize="32" Click="TripBtn_Click">Trip</Button>
+                <Button Name="TicketBtn" Height="auto" Width="auto" Margin="20" Background="#3E454C" Foreground="White"
+                        FontSize="32" Click="TicketBtn_Click">Ticket</Button>
+                <Button Name="BusBtn" Height="auto" Width="auto" Margin="20" Background="#3E454C" Foreground="White" 
+                        FontSize="32" Click="BusBtn_Click">Bus</Button>
+                <Button Name="RouteBtn" Height="auto" Width="auto" Margin="20" Background="#3E454C" Foreground="White"
+                        FontSize="32" Click="RouteBtn_Click">Route</Button>
+                <Image Source="Resources/terminal2.png" Width="200" Height="200" Margin="10" />
+            </StackPanel>
+        </Border>
+        <Border Name="HomePanel" Grid.Column="1" Background="Orange" BorderBrush="Gray" Margin="2"
+                BorderThickness="2" >
+            <Label HorizontalAlignment="Center" FontSize="48">Welcome To Karandish Terminal</Label>
+        </Border>
+        <Border Name="TripPanel" Grid.Column="1" Background="White" Visibility="Collapsed"
+                BorderBrush="Gray" BorderThickness="2">
+            <Label FontSize="48" HorizontalAlignment="Center">Trips</Label>
+        </Border>
+        <Border Name="TicketPanel" Grid.Column="1" Background="White" Visibility="Collapsed"
+                BorderBrush="Gray" BorderThickness="2">
+            <Label FontSize="48" HorizontalAlignment="Center">Ticket</Label>
+        </Border>
+        <Border Name="BusPanel" BorderThickness="2" BorderBrush="Gray" Visibility="Collapsed"
+                Grid.Column="1" Background="White">
+            <Label FontSize="48" HorizontalAlignment="Center">Buses</Label>
+        </Border>
+        <Border Name="RoutePanel" Grid.Column="1" Background="White" Visibility="Collapsed"
+                BorderBrush="Gray" BorderThickness="2">
+            <Label HorizontalAlignment="Center" FontSize="48">Route</Label>
+        </Border>
+    </Grid>
+</Window>
