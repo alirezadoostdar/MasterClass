@@ -1,8 +1,13 @@
-﻿public class program
+﻿using System.ComponentModel;
+
+public class program
 {
 	public static void Main(string[] args)
 	{
-		for (; ; )
+
+        Console.WriteLine(CalculatePowSum(1,3));
+
+        for (; ; )
 		{
 			Console.WriteLine("1) Search Book");
 			Console.WriteLine("2) Rent Book");
@@ -30,4 +35,19 @@
 			}
 		}
 	}
+
+	public double CalculatePowSum(int i, int j)
+	{
+		if (i < 0 || j < 0 || j < i)
+			throw new ArgumentOutOfRangeException();
+		
+		double sum = 0;
+		for (int n = i; n <= j ; n++ )
+		{
+			sum += Math.Pow(n,n);
+		}
+
+		return sum;
+	}
+
 }
